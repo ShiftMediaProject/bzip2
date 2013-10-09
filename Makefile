@@ -79,10 +79,6 @@ install: bzip2 bzip2recover
 	cp -f bzip2 $(PREFIX)/bin/bunzip2
 	cp -f bzip2 $(PREFIX)/bin/bzcat
 	cp -f bzip2recover $(PREFIX)/bin/bzip2recover
-	chmod a+x $(PREFIX)/bin/bzip2
-	chmod a+x $(PREFIX)/bin/bunzip2
-	chmod a+x $(PREFIX)/bin/bzcat
-	chmod a+x $(PREFIX)/bin/bzip2recover
 	cp -f bzip2.1 $(PREFIX)/man/man1
 	chmod a+r $(PREFIX)/man/man1/bzip2.1
 	cp -f bzlib.h $(PREFIX)/include
