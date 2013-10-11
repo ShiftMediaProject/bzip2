@@ -36,7 +36,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{78F4C3F4-CD1D-47EE-82D4-3A81AA701486}</ProjectGuid>
-    <RootNamespace>libbz2</RootNamespace>
+    <RootNamespace>bzip2</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -122,41 +122,41 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <TargetName>bzip2d</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <TargetName>bzip2d</TargetName>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <TargetName>bzip2</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <TargetName>bzip2</TargetName>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>libbz2d</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>libbz2d</TargetName>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>libbz2</TargetName>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>libbz2</TargetName>
-    <OutDir>..\..\..\..\</OutDir>
+    <OutDir>..\..\..\</OutDir>
     <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -178,9 +178,9 @@
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -202,9 +202,9 @@ copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
@@ -222,14 +222,14 @@ copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>..\..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
@@ -247,14 +247,14 @@ copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
       <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\x64\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>..\..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\x64\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -291,9 +291,9 @@ copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -330,9 +330,9 @@ copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
@@ -363,14 +363,14 @@ copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>..\..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
@@ -401,31 +401,31 @@ copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
       <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\x64\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>..\..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\x64\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
-copy ..\..\bzlib.h $(OutputPath)\include
+copy ..\bzlib.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
-copy ..\..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
+copy ..\LICENSE $(OutputPath)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\blocksort.c" />
-    <ClCompile Include="..\..\bzlib.c" />
-    <ClCompile Include="..\..\compress.c" />
-    <ClCompile Include="..\..\crctable.c" />
-    <ClCompile Include="..\..\decompress.c" />
-    <ClCompile Include="..\..\huffman.c" />
-    <ClCompile Include="..\..\randtable.c" />
+    <ClCompile Include="..\blocksort.c" />
+    <ClCompile Include="..\bzlib.c" />
+    <ClCompile Include="..\compress.c" />
+    <ClCompile Include="..\crctable.c" />
+    <ClCompile Include="..\decompress.c" />
+    <ClCompile Include="..\huffman.c" />
+    <ClCompile Include="..\randtable.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\bzlib.h" />
-    <ClInclude Include="..\..\bzlib_private.h" />
+    <ClInclude Include="..\bzlib.h" />
+    <ClInclude Include="..\bzlib_private.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\libbz2.def" />
+    <None Include="..\libbz2.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
