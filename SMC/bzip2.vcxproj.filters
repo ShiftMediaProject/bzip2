@@ -15,39 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\blocksort.c">
+    <ClCompile Include="..\blocksort.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\bzlib.c">
+    <ClCompile Include="..\bzlib.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\compress.c">
+    <ClCompile Include="..\compress.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\crctable.c">
+    <ClCompile Include="..\crctable.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\decompress.c">
+    <ClCompile Include="..\decompress.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\huffman.c">
+    <ClCompile Include="..\huffman.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\randtable.c">
+    <ClCompile Include="..\randtable.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\bzlib.h">
+    <ClInclude Include="..\bzlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\bzlib_private.h">
+    <ClInclude Include="..\bzlib_private.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\libbz2.def">
-      <Filter>Resource Files</Filter>
+    <None Include="..\libbz2.def">
+      <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
 </Project>
