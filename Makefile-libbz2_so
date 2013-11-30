@@ -26,6 +26,10 @@ CC=gcc
 BIGFILES=-D_FILE_OFFSET_BITS=64
 CFLAGS=-fpic -fPIC -Wall -Winline -O2 -g $(BIGFILES)
 
+# Where you want it installed when you do 'make install'
+PREFIX=/usr/local
+
+
 OBJS= blocksort.o  \
       huffman.o    \
       crctable.o   \
@@ -40,6 +44,27 @@ all: $(OBJS)
 	rm -f libbz2.so.1.0
 	ln -s libbz2.so.1.0.6 libbz2.so.1.0
 
+install: all
+	if ( test ! -d $(PREFIX)/bin ) ; then mkdir -p $(PREFIX)/bin ; fi
+	if ( test ! -d $(PREFIX)/lib ) ; then mkdir -p $(PREFIX)/lib ; fi
+	if ( test ! -d $(PREFIX)/man ) ; then mkdir -p $(PREFIX)/man ; fi
+	if ( test ! -d $(PREFIX)/man/man1 ) ; then mkdir -p $(PREFIX)/man/man1 ; fi
+	if ( test ! -d $(PREFIX)/include ) ; then mkdir -p $(PREFIX)/include ; fi
+	cp -f bzip2.1 $(PREFIX)/man/man1
+	chmod a+r $(PREFIX)/man/man1/bzip2.1
+	cp -f bzlib.h $(PREFIX)/include
+	chmod a+r $(PREFIX)/include/bzlib.h
+	cp -f libbz2.so.1.0 $(PREFIX)/bin/libbz2.so
+	chmod a+r $(PREFIX)/bin/libbz2.so
+	cp -f bzgrep.1 bzmore.1 bzdiff.1 $(PREFIX)/man/man1
+	chmod a+r $(PREFIX)/man/man1/bzgrep.1
+	chmod a+r $(PREFIX)/man/man1/bzmore.1
+	chmod a+r $(PREFIX)/man/man1/bzdiff.1
+	echo ".so man1/bzgrep.1" > $(PREFIX)/man/man1/bzegrep.1
+	echo ".so man1/bzgrep.1" > $(PREFIX)/man/man1/bzfgrep.1
+	echo ".so man1/bzmore.1" > $(PREFIX)/man/man1/bzless.1
+	echo ".so man1/bzdiff.1" > $(PREFIX)/man/man1/bzcmp.1
+	
 clean: 
 	rm -f $(OBJS) bzip2.o libbz2.so.1.0.6 libbz2.so.1.0 bzip2-shared
 
@@ -57,3 +82,4 @@ decompress.o: decompress.c
 	$(CC) $(CFLAGS) -c decompress.c
 bzlib.o: bzlib.c
 	$(CC) $(CFLAGS) -c bzlib.c
+	
