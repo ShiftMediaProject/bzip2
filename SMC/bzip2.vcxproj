@@ -271,6 +271,7 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
       <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -511,6 +512,7 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
       <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
