@@ -267,7 +267,7 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <LargeAddressAware>true</LargeAddressAware>
@@ -297,7 +297,7 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
@@ -507,7 +507,7 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
-      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <LargeAddressAware>true</LargeAddressAware>
@@ -548,7 +548,7 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>..\libbz2.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
