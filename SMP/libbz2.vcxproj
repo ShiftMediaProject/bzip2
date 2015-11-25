@@ -230,6 +230,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -256,6 +261,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
@@ -284,6 +294,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
@@ -311,6 +326,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -352,6 +372,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <ClCompile>
@@ -393,6 +418,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -434,6 +464,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <ClCompile>
@@ -475,6 +510,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
@@ -514,6 +554,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
@@ -552,6 +597,11 @@ copy ..\bzlib.h $(OutDir)\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del $(OutDir)\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\blocksort.c" />
