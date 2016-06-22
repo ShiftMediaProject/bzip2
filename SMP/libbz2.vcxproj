@@ -158,52 +158,62 @@
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <TargetName>bz2d</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <TargetName>bz2</TargetName>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <TargetName>bz2</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>libbz2d</TargetName>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>libbz2d</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>libbz2</TargetName>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <TargetName>libbz2</TargetName>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>libbz2</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <TargetName>libbz2</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -235,6 +245,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -266,6 +284,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
@@ -299,6 +325,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
@@ -331,6 +365,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -377,6 +419,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <ClCompile>
@@ -423,6 +473,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -469,6 +527,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <ClCompile>
@@ -515,6 +581,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
@@ -559,6 +633,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
@@ -602,6 +684,14 @@ copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
 del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>del $(OutDir)\include\bzlib.h
+del $(OutDir)\licenses\bzip2.txt</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Perform Custom Clean Step</Message>
+      <Outputs>fake</Outputs>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\blocksort.c" />
