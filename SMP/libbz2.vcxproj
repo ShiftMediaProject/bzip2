@@ -246,12 +246,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -285,12 +289,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
@@ -326,12 +334,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
@@ -366,12 +378,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -420,12 +436,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
@@ -474,12 +494,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -528,12 +552,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
@@ -582,12 +610,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
@@ -634,12 +666,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
@@ -685,12 +721,16 @@ del $(OutDir)\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>del $(OutDir)\include\bzlib.h
-del $(OutDir)\licenses\bzip2.txt</Command>
+      <Command>if exist $(OutDir)\include\bzlib.h (
+del /f /q $(OutDir)\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Perform Custom Clean Step</Message>
-      <Outputs>fake</Outputs>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
