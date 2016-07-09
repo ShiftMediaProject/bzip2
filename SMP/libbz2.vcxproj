@@ -653,6 +653,7 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <ProgramDatabaseFile>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDatabaseFile>
       <LargeAddressAware>true</LargeAddressAware>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -708,6 +709,7 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <ProgramDatabaseFile>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>libbz2.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
