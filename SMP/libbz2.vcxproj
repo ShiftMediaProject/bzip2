@@ -243,19 +243,19 @@
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -286,19 +286,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -332,19 +332,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -377,19 +377,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -431,19 +431,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -485,19 +485,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -539,19 +539,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -593,19 +593,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -647,19 +647,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
@@ -700,19 +700,19 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\bzlib.h $(OutDir)\include
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
 mkdir $(OutDir)\licenses
 copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
 )</Command>
     </PreBuildEvent>
     <CustomBuildStep>
-      <Command>if exist $(OutDir)\include\bzlib.h (
-del /f /q $(OutDir)\include\bzlib.h
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
 )
 if exist $(OutDir)\licenses\bzip2.txt (
 del /f /q $(OutDir)\licenses\bzip2.txt
