@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{78F4C3F4-CD1D-47EE-82D4-3A81AA701486}</ProjectGuid>
+    <ProjectGuid>{A8F4C3F4-CD1D-47EE-82D4-3A81AA701486}</ProjectGuid>
     <RootNamespace>bz2</RootNamespace>
   </PropertyGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="smp.props" />
+    <Import Project="smp_winrt.props" />
     <Import Project="libbz2_files.props" />
   </ImportGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWinRT|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -38,7 +38,7 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWinRT|x64'">
     <ClCompile>
       <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -68,40 +68,7 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
-    <ClCompile>
-      <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-    </ClCompile>
-    <Link>
-      <ModuleDefinitionFile>libbz2.def</ModuleDefinitionFile>
-    </Link>
-    <PostBuildEvent>
-      <Command>mkdir "$(OutDir)"\include
-copy ..\bzlib.h "$(OutDir)"\include
-mkdir $(OutDir)\licenses
-copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
-    </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>if exist "$(OutDir)"\include\bzlib.h (
-del "$(OutDir)"\include\bzlib.h
-)</Command>
-    </PreBuildEvent>
-    <CustomBuildStep>
-      <Command>if exist "$(OutDir)"\include\bzlib.h (
-del /f /q "$(OutDir)"\include\bzlib.h
-)
-if exist $(OutDir)\licenses\bzip2.txt (
-del /f /q $(OutDir)\licenses\bzip2.txt
-)</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Custom Clean Step</Message>
-      <Outputs>force_clean</Outputs>
-    </CustomBuildStep>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLLWinRT|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -134,67 +101,7 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-    </ClCompile>
-    <PostBuildEvent>
-      <Command>mkdir "$(OutDir)"\include
-copy ..\bzlib.h "$(OutDir)"\include
-mkdir $(OutDir)\licenses
-copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
-    </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>if exist "$(OutDir)"\include\bzlib.h (
-del "$(OutDir)"\include\bzlib.h
-)</Command>
-    </PreBuildEvent>
-    <CustomBuildStep>
-      <Command>if exist "$(OutDir)"\include\bzlib.h (
-del /f /q "$(OutDir)"\include\bzlib.h
-)
-if exist $(OutDir)\licenses\bzip2.txt (
-del /f /q $(OutDir)\licenses\bzip2.txt
-)</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Custom Clean Step</Message>
-      <Outputs>force_clean</Outputs>
-    </CustomBuildStep>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-    </ClCompile>
-    <PostBuildEvent>
-      <Command>mkdir "$(OutDir)"\include
-copy ..\bzlib.h "$(OutDir)"\include
-mkdir $(OutDir)\licenses
-copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
-    </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>if exist "$(OutDir)"\include\bzlib.h (
-del "$(OutDir)"\include\bzlib.h
-)</Command>
-    </PreBuildEvent>
-    <CustomBuildStep>
-      <Command>if exist "$(OutDir)"\include\bzlib.h (
-del /f /q "$(OutDir)"\include\bzlib.h
-)
-if exist $(OutDir)\licenses\bzip2.txt (
-del /f /q $(OutDir)\licenses\bzip2.txt
-)</Command>
-    </CustomBuildStep>
-    <CustomBuildStep>
-      <Message>Custom Clean Step</Message>
-      <Outputs>force_clean</Outputs>
-    </CustomBuildStep>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLLWinRT|x64'">
     <ClCompile>
       <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -227,7 +134,100 @@ del /f /q $(OutDir)\licenses\bzip2.txt
       <Outputs>force_clean</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWinRT|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
+mkdir $(OutDir)\licenses
+copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWinRT|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
+mkdir $(OutDir)\licenses
+copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRT|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>libbz2.def</ModuleDefinitionFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir "$(OutDir)"\include
+copy ..\bzlib.h "$(OutDir)"\include
+mkdir $(OutDir)\licenses
+copy ..\LICENSE $(OutDir)\licenses\bzip2.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del "$(OutDir)"\include\bzlib.h
+)</Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>if exist "$(OutDir)"\include\bzlib.h (
+del /f /q "$(OutDir)"\include\bzlib.h
+)
+if exist $(OutDir)\licenses\bzip2.txt (
+del /f /q $(OutDir)\licenses\bzip2.txt
+)</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+      <Outputs>force_clean</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLLWinRT|x64'">
     <ClCompile>
       <PreprocessorDefinitions>_FILE_OFFSET_BITS=64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
